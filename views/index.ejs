@@ -1,0 +1,31 @@
+
+<%- include("partials/header.ejs") %>
+
+  <div class="Experience" id="Experience">
+    <div class="container">
+        <h1 class="sub-title s-title">Blog Breeze</h1>
+        <div class="experience-content"> 
+                <% if (locals.blogs && blogs.length > 0) { %>
+                  <% blogs.forEach(function(blog, index) { %> 
+                <div class="each-experince">                
+                        <h2><%= blog.mytitle %></h2>
+                        <h3><%= blog.myauthor %></h3>
+                        <div> <%= blog.date %> </div>
+                        <p>
+                          <% if (blog.myblog.length > 400) { %>
+                              <%= blog.myblog.substring(0, 425) %>...
+                          <% } else { %>
+                              <%= blog.myblog %>
+                          <% } %>
+                      </p>
+                        <div>
+                          <button type="submit" class="button btn"><a href="/blog_post/<%= index %>">See More</a></button>
+                        </div>
+                </div>
+              <% })} %>
+
+        </div>
+    </div>
+  </div>
+
+  <%- include("partials/footer.ejs") %>

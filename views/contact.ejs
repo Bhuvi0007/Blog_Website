@@ -1,0 +1,14 @@
+<%- include("partials/header.ejs") %>
+    <div class="container_contact">
+        <h1 class="about-title">Contact Me</h1>
+      <% if(locals.message){ %>
+        <br><h2> <%= message %> </h2><br><br><br>
+        <% } %> 
+        <form action="/submitted" method="POST">
+                <input type="text" name="name"  width="300px" placeholder="Name" required>
+                <input type="email" name="email" width="300px" placeholder="Email" required>
+                <textarea name="message" id="textarea" placeholder="Message" rows="10"></textarea>
+                <input type="submit" value="Submit" class="contact-btn">      
+        </form>
+    </div>
+<%- include("partials/footer.ejs") %>

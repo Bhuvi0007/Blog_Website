@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs") %>
+
+<% if(mytitle && myauthor && date && myblog && index) { %>
+    <div class="container-post">
+        <h1 class="post-h1"><%= mytitle %></h1>
+        <h2 class="post-h2"><%= myauthor %></h2>
+        <p class="post-date"><%= date %></p>
+        <p class="para-post"><%- myblog.replace(/\n/g, '<br>') %></p>
+        <div class="bttn">
+            <button type="button" class="button btn-post"><a href="/edit_blog/<%= index %>">Edit</a></button>
+            <button type="button" class="button btn-post"><a href="/delete_blog/<%= index %>">Delete</a></button>
+        </div>
+    </div>
+<% } else { %>
+    <div class="container-post">
+        <h1 class="post-h1">Blog Breeze</h1>
+        <h2 class="post-h2">Bhuvan M</h2>
+        <p class="post-date">12/9/2024</p>
+        <p class="para-post">At Blog Breeze, we aim to empower content creators and readers alike with a user-friendly, dynamic blogging platform. Whether you're here to share your thoughts, explore expert reviews, or engage in community discussions, Blog Breeze has it all. Our platform, built with EJS, Node.js, and Express, makes it easy to add, edit, and manage posts, ensuring a seamless experience.</p>
+        <div class="bttn">
+            <button type="button" class="button btn-post"><a href="/edit_blog/<%= index %>">Edit</a></button>
+            <button type="button" class="button btn-post"><a href="/delete_blog/<%= index %>">Delete</a></button>
+        </div>
+    </div>
+<% } %>
+
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,14 @@
+<%- include("partials/header.ejs") %>
+    <div class="blog_create">  
+        <div class="col1">
+        <h1 class="about-title blog-title">Publish Your Blog</h1>
+        <form action="/submit" method="POST" class="blog-form">    
+            <input type="text" name="title" placeholder="Title" class="blog-input" required>       
+            <input type="text" name="author" placeholder="Author Name" class="blog-input" required>
+            <textarea name="blog" rows="10" placeholder="Blog" class="blog-textarea"></textarea>
+            <input type="submit" value="Submit" class="contact-btn blog-button">
+        </form>
+    </div>
+    <img src="images/blog.jpg" alt="blog image" class="blog_img">
+    </div>
+<%- include("partials/footer.ejs") %>       

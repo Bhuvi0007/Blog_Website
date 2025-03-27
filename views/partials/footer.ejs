@@ -1,0 +1,41 @@
+</main>
+<footer class="footer">
+    <p>Copyright &copy <%= new Date().getFullYear() %> &nbsp; Bhuvan M</p>
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/bhuvanm9844"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>                   
+        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+<script>
+const navMenu = document.getElementById("nav_menu");
+const navToggle = document.getElementById("toggle")
+const navClose = document.getElementById("close");
+
+if(navToggle){
+    navToggle.addEventListener("click", () => {
+        navMenu.classList.add("show-menu")
+        console.log(navMenu);
+
+        setTimeout(navMenu.addEventListener("click",() => {
+                navMenu.classList.remove("show-menu")
+            
+        }), 2000)
+        
+    })
+}
+
+if(navClose){
+    navClose.addEventListener("click", () => {
+        navMenu.classList.remove("show-menu")
+    })
+}
+
+    </script> 
+</body>
+</html>
+
+
